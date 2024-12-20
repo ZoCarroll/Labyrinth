@@ -9,7 +9,16 @@
 
 
 ROOM *buildLabyrinth(){
-    //bool start, bool treasure, ROOM *north, ROOM *west, ROOM *south, ROOM *east, bool pNorth, bool pWest, bool pSouth, bool pEast
-    ROOM *labyrinthStart =roomCreate(true, );
+    int LABYRINTHSIZE = 40;
+
+    //bool start, bool treasure, ROOM *north, ROOM *west, ROOM *south, ROOM *east, bool pNorth, bool pWest, bool pSouth, bool pEast  -  true, false, NULL, NULL, NULL, NULL,  false, false, false, false
+    ROOM *labyrinthStart = malloc(LABYRINTHSIZE* sizeof(ROOM));
+    labyrinthStart =GenericRoomCreate();
+    labyrinthStart->start = true;
+    labyrinthStart->pathSouth = true;
     
+    ROOM *currentRoom = labyrinthStart;
+    if(currentRoom->pathNorth == true && currentRoom->north == NULL){
+        
+    }
 }

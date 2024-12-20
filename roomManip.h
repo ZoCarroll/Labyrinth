@@ -14,6 +14,8 @@ struct ROOM{
         bool pathNorth;
         ROOM *south;
         bool pathSouth;
+        int xCoord;
+        int yCoord;
     };
 ROOM* roomCreate(ROOM *room);
 // ROOM *readRoomFile(char *file, int *i);
