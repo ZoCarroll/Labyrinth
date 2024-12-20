@@ -6,3 +6,6 @@
 #include "construction.h"
 
 
+ROOM *buildLabrynth(){
+    
+}
