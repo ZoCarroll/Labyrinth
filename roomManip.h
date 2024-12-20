@@ -14,6 +14,7 @@ struct ROOM{
         bool pathNorth;
         ROOM *south;
         bool pathSouth;
+        int rootPath;
         int xCoord;
         int yCoord;
     };
