@@ -25,14 +25,14 @@ ROOM* roomCreate(bool start, bool treasure, ROOM *north, ROOM *west, ROOM *south
     return newRoom;
 }
 
-ROOM* northRoomCreate(ROOM *south){
+ROOM* northRoomCreate(ROOM *newSouth){
     bool start = false;
     bool treasure = false;
     ROOM *north = NULL;
     bool pathNorth = false;
     ROOM *west = NULL;
     bool pathWest = false;
-    ROOM *south = south;
+    ROOM *south = newSouth;
     bool pathSouth = true;
     ROOM *east = NULL;
     bool pathEast = false;
@@ -41,10 +41,10 @@ ROOM* northRoomCreate(ROOM *south){
     return roomCreate(start, treasure, north, west, south, east, pathNorth, pathWest, pathSouth, pathEast, x, y);
 }
 
-ROOM* southRoomCreate(ROOM *north){
+ROOM* southRoomCreate(ROOM *newNorth){
     bool start = false;
     bool treasure = false;
-    ROOM *north = north;
+    ROOM *north = newNorth;
     bool pathNorth = true;
     ROOM *west = NULL;
     bool pathWest = false;
@@ -57,7 +57,7 @@ ROOM* southRoomCreate(ROOM *north){
     return roomCreate(start, treasure, north, west, south, east, pathNorth, pathWest, pathSouth, pathEast, x, y);
 }
 
-ROOM* westRoomCreate(ROOM *east){
+ROOM* westRoomCreate(ROOM *newEast){
     bool start = false;
     bool treasure = false;
     ROOM *north = NULL;
@@ -66,19 +66,19 @@ ROOM* westRoomCreate(ROOM *east){
     bool pathWest = false;
     ROOM *south = NULL;
     bool pathSouth = false;
-    ROOM *east = east;
+    ROOM *east = newEast;
     bool pathEast = true;
     int x = south->xCoord -1;
     int y = south->yCoord;
     return roomCreate(start, treasure, north, west, south, east, pathNorth, pathWest, pathSouth, pathEast, x, y);
 }
 
-ROOM* eastRoomCreate(ROOM *west){
+ROOM* eastRoomCreate(ROOM *newWest){
     bool start = false;
     bool treasure = false;
     ROOM *north = NULL;
     bool pathNorth = false;
-    ROOM *west = west;
+    ROOM *west = newWest;
     bool pathWest = true;
     ROOM *south = NULL;
     bool pathSouth = false;

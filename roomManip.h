@@ -17,6 +17,11 @@ struct ROOM{
         int xCoord;
         int yCoord;
     };
-ROOM* roomCreate(ROOM *room);
+ROOM* roomCreate(bool start, bool treasure, ROOM *north, ROOM *west, ROOM *south, ROOM *east, bool pNorth, bool pWest, bool pSouth, bool pEast, int x, int y);
+ROOM* northRoomCreate(ROOM *south);
+ROOM* southRoomCreate(ROOM *north);
+ROOM* westRoomCreate(ROOM *east);
+ROOM* eastRoomCreate(ROOM *west);
+ROOM* genericRoomCreate();
 // ROOM *readRoomFile(char *file, int *i);
 #endif

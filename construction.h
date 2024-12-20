@@ -1,6 +1,6 @@
-#ifndef STRINGMANIP_H
-#define STRINGMANIP_H
+#ifndef CONSTRUCTION_H
+#define CONSTRUCTION_H
 
-
+ROOM* buildLabyrinth();
 
 #endif
