@@ -14,10 +14,11 @@ struct ROOM{
         bool pathNorth;
         ROOM *south;
         bool pathSouth;
+        int rootPath;
         int xCoord;
         int yCoord;
     };
-ROOM* roomCreate(bool start, bool treasure, ROOM *north, ROOM *west, ROOM *south, ROOM *east, bool pNorth, bool pWest, bool pSouth, bool pEast, int x, int y);
+ROOM* roomCreate(bool start, bool treasure, ROOM *north, ROOM *west, ROOM *south, ROOM *east, bool pNorth, bool pWest, bool pSouth, bool pEast, int x, int y, int root);
 ROOM* northRoomCreate(ROOM *south);
 ROOM* southRoomCreate(ROOM *north);
 ROOM* westRoomCreate(ROOM *east);
